@@ -7,14 +7,29 @@
         <body>
             <!--Header div-->
             <div>
-                <img src="assests\images\logo.png" alt="logo" height="100px" width="150px"/>
-                <a href="login.html" target="_blank">Login</a>
+                <a href="index.html"><img src="assests\images\logo.png" alt="logo" height="100px" width="150px"/></a> 
+                <a href="login.html">Login</a>
             </div>
 
             <!--Content Div-->
             <div>
                 <div><img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" height="900px" width="1200px"/></div>
-                <a href="payment.html" target="_blank">Book Now</a>
+                <form action="payment.html" method="GET">
+                    <label for="adults">Adults:</label>
+                    <input type="number" name="adults" min="1" id="adults"><br>
+                    <label for="name">Name:</label>
+                    <input required type="text" name="Name" id="name"><br>
+                    <label for="startDate">From Date:</label>
+                    <input required type="date" name="startDate" id="startDate"><br>
+                    <label for="endDate">To Date:</label>
+                    <input required type="date" name="endDate" id="endDate"><br>
+                    <label for="total">Total:</label>
+                    <input required disabled type="text" name="total" id="total"><br>
+                    <button>
+                        Book Now
+                    </button>
+
+                </form>
                 <br/>
                 
                 <h2>Radisson Blu Hotel</h2>
@@ -38,7 +53,7 @@
 
             <!--Footer Div-->
             <div>
-                <a href="contact.html" target="_blank">Contact us</a><br/>
+                <a href="contact.html">Contact us</a><br/>
                 <a href="https://www.facebook.com" target="_blank">
                     <img src="assests/images/facebook.png" height="20px" width="22px"/></a>
                
