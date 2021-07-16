@@ -2,37 +2,41 @@
 <html>
     <head>
         <title>Detail</title>
+        <link rel="stylesheet" href="styles/common.css">
+        <link rel="stylesheet" href="styles/detail.css">
     </head>
-    <div>
-        <body>
-            <!--Header div-->
-            <div>
-                <a href="index.html"><img src="assests\images\logo.png" alt="logo" height="100px" width="150px"/></a> 
+    <body>
+        <div class="container">
+            <!--Header-->
+            <header>
+                <a href="index.html"><img src="assests\images\logo.png" alt="logo" id="logo-image"></a> 
                 <a href="login.html">Login</a>
-            </div>
+            </header>
 
-            <!--Content Div-->
+            <!--Content-->
             <div>
-                <div><img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" height="900px" width="1200px"/></div>
-                <form action="payment.html" method="GET">
-                    <label for="adults">Adults:</label>
-                    <input type="number" name="adults" min="1" id="adults"><br>
-                    <label for="name">Name:</label>
-                    <input required type="text" name="Name" id="name"><br>
-                    <label for="startDate">From Date:</label>
-                    <input required type="date" name="startDate" id="startDate"><br>
-                    <label for="endDate">To Date:</label>
-                    <input required type="date" name="endDate" id="endDate"><br>
-                    <label for="total">Total:</label>
-                    <input required disabled type="text" name="total" id="total"><br>
-                    <button>
-                        Book Now
-                    </button>
-
-                </form>
+                <div><img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="hotel-image"></div>
+                <div>
+                    <form action="payment.html" method="GET">
+                        <label for="adults">Adults:</label>
+                        <input type="number" name="adults" min="1" id="adults"><br>
+                        <label for="name">Name:</label>
+                        <input required type="text" name="Name" id="name"><br>
+                        <label for="startDate">From Date:</label>
+                        <input required type="date" name="startDate" id="startDate"><br>
+                        <label for="endDate">To Date:</label>
+                        <input required type="date" name="endDate" id="endDate"><br>
+                        <label for="total">Total:</label>
+                        <input required disabled type="text" name="total" id="total"><br>
+                        <button>
+                            Book Now
+                        </button>
+                    </form>
+                </div>
                 <br/>
                 
-                <h2>Radisson Blu Hotel</h2>
+                <div>
+                    <h2>Radisson Blu Hotel</h2>
                 <p>RATING</p>
                 <p>5 Star</p>
                 <p>New Delhi</p>
@@ -48,22 +52,27 @@
                     </ul>
 
                     <h4>DESCRIPTION</h4>
-                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita dolorum mollitia voluptates. Aspernatur nihil tenetur ipsam sit quos deleniti? Consequatur possimus asperiores saepe tempore dolores aliquid, quas labore laudantium ab.</p>
+                    <p>
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita dolorum mollitia voluptates. 
+                       Aspernatur nihil tenetur ipsam sit quos deleniti? Consequatur possimus asperiores saepe tempore 
+                       dolores aliquid, quas labore laudantium ab.
+                    </p>
+                </div>
             </div>
 
             <!--Footer Div-->
-            <div>
+            <footer>
                 <a href="contact.html">Contact us</a><br/>
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="assests/images/facebook.png" height="20px" width="22px"/></a>
+                    <img src="assests/images/facebook.png" class="social-media"></a>
                
                 <a href="https://www.instagram.com" target="_blank">
-                    <img src="assests/images/instagram.png" height="20px" width="22px"/></a>
+                    <img src="assests/images/instagram.png" class="social-media"></a>
 
                 <a href="https://twitter.com" target="_blank">
-                    <img src="assests/images/twitter.png" height="20px" width="22px"/></a><br/>
+                    <img src="assests/images/twitter.png" class="social-media"></a><br/>
                 &copy; 2020 ROOM SEARCH PVT.LTD.
-            </div>
-        </body>
-    </div>
+            </footer>
+        </div>
+    </body>
 </html>

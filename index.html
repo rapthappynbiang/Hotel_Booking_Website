@@ -2,41 +2,54 @@
 <html>
     <head>
         <title>Index</title>
+        <link rel="stylesheet" href="styles/common.css">
     </head>
-    <div>
-        <body>
-            <!--Header div-->
-            <div>
-                <img src="assests\images\logo.png" alt="logo" height="100px" width="150px"/>
-                <a href="login.html">Login</a>
-            </div>
+    <body>
+        <div class="container">
+            <!--Header-->
+            <header>
+                <img src="assests\images\logo.png" alt="logo" height="100px" width="150px" id="logo-image">
+               <a href="login.html">Login</a>
+            </header>
             
-            <!--Content Div-->
-            <div>
-               <div>
-                   <input type="text" name="city" placeholder="city">
-               </div>
-                   <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" height="300px" width="300px"/></a>
-                   <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" height="300px" width="300px"/>
-                   <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" height="300px" width="300px"/>
-                   <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" height="300px" width="300px"/>
-                   <br>
-                   <a href="index.html">View more>></a>
+            <!--Content-->
+            <div class="content"> 
+                <div>
+                    <input type="text" name="city" placeholder="city">
+                </div>
+
+                <div class="city">
+                    <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" class="city-card"></a>
+                </div>
+
+                <div class="city">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" class="city-card"/>
+                </div>
+
+                <div class="city">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" class="city-card">
+                </div>
+
+                <div class="city">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" class="city-card">
+                </div>
+                <br>
+                <a href="index.html">View more>></a>
             </div>
 
-            <!--Footer Div-->
-            <div>
+            <!--Footer-->
+            <footer>
                 <a href="contact.html">Contact us</a><br/>
                 <a href="https://www.facebook.com" target="_blank">
-                    <img src="assests/images/facebook.png" height="20px" width="22px"/></a>
-               
+                    <img src="assests/images/facebook.png" class="social-media"></a>
+           
                 <a href="https://www.instagram.com" target="_blank">
-                    <img src="assests/images/instagram.png" height="20px" width="22px"/></a>
+                    <img src="assests/images/instagram.png" class="social-media"></a>
 
                 <a href="https://twitter.com" target="_blank">
-                    <img src="assests/images/twitter.png" height="20px" width="22px"/></a><br/>
+                    <img src="assests/images/twitter.png" class="social-media"></a><br/>
                 &copy; 2020 ROOM SEARCH PVT.LTD.
-            </div>
-        </body>
-    </div>
+            </footer>
+        </div>
+    </body>
 </html>

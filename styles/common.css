@@ -1,0 +1,24 @@
+body{
+    height: 100vh;
+}
+.container{
+    height: 100%; width: 100%;
+}
+header{
+    width: 100%;
+}
+footer{
+    width: 100%;
+}
+.social-media{
+    height: 20px; width: 22px;
+}
+#logo-image{
+    height: 60px; width: 60px;
+}
+.city{
+    display: inline-block;
+}
+.city-card{
+    height: 150px; width: 150px;
+}
