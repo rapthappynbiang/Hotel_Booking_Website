@@ -1,0 +1,15 @@
+body{
+    height: 50vh; width: 100vw;
+    margin: 0;
+}
+.container{
+    width: 100%; height: 100%;
+
+}
+.loader{
+    height: 70px; width: 70px;
+    border: 12px solid;
+    border-color: #444444 #f3f3f3 #f3f3f3;
+    border-radius: 50%;
+    margin: 20% auto;
+}
