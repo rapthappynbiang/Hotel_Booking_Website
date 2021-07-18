@@ -2,6 +2,16 @@
 .city-container{
     margin: 0 15% auto;
 }
+/*City search bar */
+.search-bar{
+   margin: auto;
+   border: 1px solid transparent;
+   border-radius: 12px;
+   width: 28%;
+   padding: 10px;
+   background-color: #f1f1f1;
+   font-size: 16px;
+}
 /* city class for each div containing city card*/
 .city{
     display: inline-block;
@@ -16,9 +26,14 @@
 /* city-filter class for the search bar container*/
 .city-filter{
     background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
-    height: 450px;
+    height: 380px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    display: flex;
+    align-items: center;
+}
+.view-more{
+    text-align: center;
 }
 
