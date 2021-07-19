@@ -9,8 +9,8 @@
     <body>
         <div class="container">
             <!--Header-->
-            <header>
-                <img src="assests\images\logo.png" alt="logo" height="100px" width="150px" id="logo-image">
+            <header class="flex-box">
+                <div><img src="assests\images\logo.png" alt="logo" id="logo-image"></div>
                 <div class="login-btn">
                     <a href="login.html">Login</a> 
                 </div> 
@@ -23,20 +23,26 @@
                 </div>
 
                 <div class="city-container">
-                    <div class="city">
-                        <a href="list.html"><img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" class="city-card"></a>
-                    </div>
+                    <a href="list.html" class="city">
+                        <div class="city">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/a2/new-delhi.jpg" class="city-card">
+                            <p class="city-name">Delhi</p>
+                        </div>   
+                    </a>
     
                     <div class="city">
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fc/f0/goa.jpg" class="city-card"/>
+                        <p class="city-name">Goa</p>
                     </div>
     
                     <div class="city">
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/0f/98/f7/df/charminar.jpg" class="city-card">
+                        <p class="city-name">Hyderabad</p>
                     </div>
     
                     <div class="city">
                         <img src="https://media-cdn.tripadvisor.com/media/photo-s/15/33/fe/ac/kolkata-calcutta.jpg" class="city-card">
+                        <p class="city-name">Kolkata</p>
                     </div>
                 </div>
              <br>
@@ -46,7 +52,7 @@
             </div>
 
             <!--Footer-->
-            <footer>
+            <footer class="flex-box">
                 <div class="contact-links">
                     <a href="contact.html">Contact Us</a>
                 </div>

@@ -1,10 +1,60 @@
+.content{
+    display: flex;
+}
+.box{
+    width: 100%;
+    height: 400px;
+    display: flex;
+}
+.image-box{
+    width: 64%; height: 100%;
+    border: 1px solid black;
+    margin: 2% 0% 2% 2%;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+}
 .hotel-image{
-    height: 500px; width: 500px;
-    margin: 2% 4% 0%;
+    height: 350px; width: 500px;
+    margin: 1%;
 }
 .customer-details{
-    margin: 0% 4% 1%;
+    width: 32%; height: 100%;
+    border: 1px solid black;
+    margin: 2% 2% 2% 0%;
+    display: flex;
+    align-items: center;
+}
+.form-class{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.form-class div{
+    margin: 4% 6%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;;
+    align-items: space-evenly;
+}
+label{ 
+    width: 40%;
+    display: flex;
+}
+input{
+    width: 60%;
+    display: flex;
 }
 .hotel-details{
-    margin: 1% 4% 2%;
+    margin: 2%;
+}
+.hotel-details *{
+    padding: 1% 0% 0% 0%;
+}
+.btn{
+    display: flex;
+    align-items: end;
+}
+button{
+    padding: 2% 1%;
 }

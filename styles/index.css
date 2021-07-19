@@ -1,5 +1,8 @@
 /* city-container class for containing all city cards*/
 .city-container{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-between;
     margin: 0 15% auto;
 }
 /*City search bar */
@@ -12,21 +15,43 @@
    background-color: #f1f1f1;
    font-size: 16px;
 }
+.search-bar:focus{
+    outline: none;
+}
 /* city class for each div containing city card*/
 .city{
-    display: inline-block;
-    padding: 4%;
+    margin: 4%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
 }
 /* city-card class for each city image*/
 .city-card{
     height: 150px; width: 150px;
     border: 0px;
     border-radius: 25%;
+    box-shadow: 10px 10px 10px grey;
+}
+.city-name{
+    height: 150px; width: 150px;
+    border: 0px;
+    border-radius: 25%;
+    color: #f1f1f1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    position: absolute;
+}
+.city-card:hover + .city-name{
+    display: flex;
+    z-index: 1;
+    background-color:  rgba(0, 0, 0, 0.5);
 }
 /* city-filter class for the search bar container*/
 .city-filter{
     background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
-    height: 380px;
+    height: 450px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -35,5 +60,5 @@
 }
 .view-more{
     text-align: center;
+    margin: 1%;
 }
-
