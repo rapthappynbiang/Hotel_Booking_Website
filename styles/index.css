@@ -1,13 +1,25 @@
+/* city-filter class for the search bar container*/
+.city-filter{
+    height: 450px;
+    margin-top: 60px;
+    background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 /* city-container class for containing all city cards*/
 .city-container{
+    margin: 4% 15% 2%;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     justify-content:space-between;
-    margin: 0 15% auto;
 }
 /*City search bar */
 .search-bar{
-   margin: auto;
    border: 1px solid transparent;
    border-radius: 12px;
    width: 28%;
@@ -20,7 +32,6 @@
 }
 /* city class for each div containing city card*/
 .city{
-    margin: 4%;
     display: flex;
     justify-content:center;
     align-items: center;
@@ -30,6 +41,7 @@
     height: 150px; width: 150px;
     border: 0px;
     border-radius: 25%;
+    display: flex;
     box-shadow: 10px 10px 10px grey;
 }
 .city-name{
@@ -48,17 +60,9 @@
     z-index: 1;
     background-color:  rgba(0, 0, 0, 0.5);
 }
-/* city-filter class for the search bar container*/
-.city-filter{
-    background-image: url(https://media-cdn.tripadvisor.com/media/photo-o/14/10/2e/af/india.jpg);
-    height: 450px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    align-items: center;
-}
 .view-more{
     text-align: center;
-    margin: 1%;
+    margin: 1% 0% 7%;
 }
+
+

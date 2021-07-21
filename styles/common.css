@@ -1,13 +1,19 @@
 *{
     font-family: 'Ubuntu';
 }
-body{
-    height: 50vh;
+html body{
+    height: 100%;
     margin: 0;
     background-color: #e0e0e0;
 }
-.container{
+.Box{
     height: 100%; width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.content{
+    height: 100%;
+    top: 0;
     display: flex;
     flex-direction: column;
 }
@@ -32,11 +38,6 @@ header{
 }
 .login-btn{
     margin-right: 2%;
-}
-.content{
-    display: flex;
-    flex-direction: column;
-    padding: 60px 0% 5%;
 }
 footer{
     bottom: 0px;
