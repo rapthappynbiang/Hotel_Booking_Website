@@ -2,7 +2,9 @@
 <html>
     <head>
         <title>List</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="styles/common.css">
@@ -22,9 +24,9 @@
     <body>
          <div class="Box">
              <!--Header-->
-             <header class="flex-box">
+             <header class="flex-box col-sm-12 col-md-12">
                 <a href="index.html"><img src="assests\images\logo.png" alt="logo" id="logo-image"></a> 
-                <div class="btn">
+                <div class="btn btn-sm">
                     <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#loginModal">
                         Login
                     </button>
@@ -41,47 +43,64 @@
                     <button type="button" class="btn btn-primary active" data-toggle="link" aria-pressed="true" role="button" onclick="showMap()">Map View</button>
                 </div>
               </div>
-                <div class="hotel-container"  id="list">
-                    <div class="box box1">
-                        <a href="detail.html" style="color: none;">
-                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="image"></a>
-                            <div class="labels">
+                <div class="container-fluid hotel-container"  id="list">
+                    <a class="box  col-xs-12 col-sm-12 col-md-12 col-lg-5" href="detail.html" style="color: none; text-decoration: none;">
+                            <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="image image-responsive col-xs-12 col-sm-12 col-md-6">
+                            <div class="labels col-sm-12 col-md-4">
                                 <h3>Radisson Blu Hotel</h3>
-                                <p>5 Star</p>
+                                <div>
+                                  <i class="fa fa-star" style="color: orange;"></i>
+                                  <i class="fa fa-star" style="color: orange;"></i>
+                                  <i class="fa fa-star" style="color: orange;"></i>
+                                  <i class="fa fa-star" style="color: orange;"></i>
+                                  <i class="fa fa-star" style="color: orange;"></i>
+                                </div>
                                 <p>New Delhi</p>
                             </div>
-                    </div>
+                      </a>
     
-                    <div class="box box2">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" class="image">
+                    <div class="box col-xs-12 col-sm-12 col-md-12 col-lg-5">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/15/06/31/5f/facade.jpg" class="image image-responsive col-xs-12 col-sm-12 col-md-6">
                      
-                        <div class="labels">
+                        <div class="labels col-sm-12 col-md-4">
                             <h3>The Lalit New Delhi</h3>
-                            <p>4.5 Star</p>
+                            <div>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star-half-o" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: black;"></i>
+                            </div>
                             <p>New Delhi</p>
                         </div>
                     </div>
                      
     
-                    <div class="box box3">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" class="image">
+                    <div class="box col-xs-12 col-sm-12 col-md-12 col-lg-5">
+                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/1b/4e/9b/11/exterior.jpg" class="image image-responsive col-xs-12 col-sm-12 col-md-6">
                 
-                        <div class="labels">
+                        <div class="labels col-sm-12 col-md-4">
                             <h3>Taj Palace</h3>
-                            <p>4.0 Star</p>
+                            <div>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: orange;"></i>
+                              <i class="fa fa-star" style="color: black;"></i>
+                            </div>
                             <p>New Delhi</p>
                         </div>
                     </div>
                 </div>
                 <div id="map">
-                  <img class="mapImage" src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png">
+                  <img class="mapImage image-responsive" src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png">
                   <p>MAP VIEW</p>
               </div>
             </div>
 
             <!--Footer-->
-            <footer class="flex-box">
-                <div class="btn">
+            <footer class="flex-box col-sm-12 col-md-12">
+                <div class="btn btn-sm">
                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactUsModal">
                         Contact Us
                     </button>

@@ -1,24 +1,30 @@
-/*.content{
-    height: 100%;
-    display: flex;
-    flex-direction: column;
+.content{
     justify-content: center;
-    margin-top: 4%;
-    margin-bottom: 7%;
-    overflow-y: scroll;
 }
 /* styling div tag containing the img tag*/
-#hotel-image{
-    margin: 11% auto 0;
-    height: 270px; width: 60%;
+#hotel-container{
+    margin: 11% 0 0;
+    height: auto;
     background-color: rgb(132,136,139);
+    padding: 0;
     display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
     align-items: center;
 }
 /*styling hotel image tag*/
 .hotel-image{
-    margin-right: 4%;
+    padding: 0;;
     height: 100%; width: 300px;
+}
+.hotel-details{
+    margin: 11% 0 0;
+    height: auto;
+    background-color: rgb(132, 136, 139);
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-items: center;
 }
 .payment-box{
     margin: 1% 2% 20%;
@@ -26,9 +32,11 @@
     border-radius: 5px;
     background-color: rosybrown;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     justify-content:space-evenly;
+    position: relative;
 }
 .payment-box div{
     padding: 1%;

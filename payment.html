@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Payment</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -8,11 +9,31 @@
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/payment.css">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <style>
+          @media only screen and (max-width:767px){
+                  #hotel-container{
+                       margin: 30% 0%;
+                       padding-top: 5%;
+                       margin-bottom: 0;
+                  }
+                  .hotel-details{
+                     margin: 0;
+                     padding-top: 2%;
+                     margin-top: 0;
+                  }
+                  .payment-box{
+                    justify-content: space-between;
+                  }
+                  .payNowButton{
+                    margin: auto;
+                  }
+          }
+        </style>
     </head>
     <body>
         <div class="Box">
             <!--Header-->
-            <header class="flex-box">
+            <header class="flex-box col-sm-12 col-md-12">
                 <a href="index.html"><img src="assests\images\logo.png" alt="logo" id="logo-image"></a> 
                 <div class="btn">
                     <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#loginModal">
@@ -23,17 +44,16 @@
 
             <!--Content-->
             <div class="content">
-                <div id="hotel-image">
-                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="hotel-image">
-                   <div>
-                        <h2><b>Radisson Blu Hotel</b></h2>
-                        <p>#38 of 1,289 hotels in New Delhi</p>
-                        <p>National Highway 8, New Delhi 110017 india</p>
-                   </div> 
+                <div class="col-sm-12 col-md-2 col-lg-2" id="hotel-container">
+                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="hotel-image"> 
                 </div>
-                <br/>
-                
-                <div class="payment-box">
+                <div class="hotel-details col-sm-12 col-md-4 col-lg-5">
+                  <h2><b>Radisson Blu Hotel</b></h2>
+                  <p>#38 of 1,289 hotels in New Delhi</p>
+                  <p>National Highway 8, New Delhi 110017 india</p>
+                </div>
+
+                <div class="payment-box col-lg-11">
                     <div class="customer-details">
                         <p><b>Name: </b>John Doe</p>
                         <p> <b>Number of Adults: </b> 2</p>      
@@ -45,14 +65,14 @@
                         <p><b>Tariff Breakdown: </b>Rs 1000 x 2 Adults x 5 Nights</p>
                         <p><b>Total Amount: </b>Rs 10000</p>
                     </div>                      
-                    <div>
+                    <div class="payNowButton">
                         <a class="btn btn-success disabled" href="#">Pay Now</a>
                     </div>
                 </div>
             </div>
 
             <!--Footer-->
-            <footer class="flex-box">
+            <footer class="flex-box col-sm-12 col-md-12">
                 <div class="btn">
                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactUsModal">
                         Contact Us

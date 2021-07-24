@@ -2,17 +2,55 @@
 <html>
     <head>
         <title>Detail</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/detail.css">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+       <style>
+            @media only screen and (max-width: 765px){
+            .prev{
+                left: 80px;
+                z-index:1;
+                margin: auto;
+                position: absolute;
+            }
+
+            .next{
+                right: 80px;
+                z-index:1;
+                margin: auto;
+                position: absolute; 
+            }
+            
+            .slider-container{
+                margin: 2%;
+                margin-bottom: 0;
+            }
+            
+           .carousel{
+               width: 100%;
+           }
+
+            .customer-details{
+                height:auto;
+                margin: 2%;
+                margin-top: 0;
+            }
+
+            .hotel-image{
+                width: auto;
+            }
+        }
+       </style>
     </head>
     <body>
         <div class="Box">
             <!--Header-->
-            <header class="flex-box">
+            <header class="flex-box col-xs-12 col-sm-12">
                 <a href="index.html"><img src="assests\images\logo.png" alt="logo" id="logo-image"></a> 
                 <div class="btn">
                     <button type="button" class="btn btn-light btn-sm" data-toggle="modal" data-target="#loginModal">
@@ -23,11 +61,31 @@
 
             <!--Content-->
             <div class="content">
-                <div class="box">
-                    <div class="image-box">
-                        <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" class="hotel-image">
-                    </div>
-                    <div class="customer-details">
+                   <div class="slider-container col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="slider-control col-sm-1">
+                           <a class="prev" href="#mySlides" role="button" data-slide="prev">&#10094;</a>
+                       </div>
+                       <div id="mySlides" class="carousel slide col-xs-12 col-sm-12 col-md-6 col-lg-7" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item  active" style="text-align: center;">
+                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" 
+                                    class="hotel-image col-xs-12 col-sm-12 col-md-6 col-lg-7" alt="First-slide">
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg"
+                                     class="hotel-image col-xs-12 col-sm-12 col-md-6 col-lg-7" alt="Second-slide"> 
+                                </div>
+                                <div class="carousel-item" style="text-align: center;">
+                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg"
+                                    class="hotel-image col-xs-12 col-sm-12 col-md-6 col-lg-7" alt="Third-slide"> 
+                                </div>
+                            </div>
+                        </div>
+                        <div class="slider-control col-sm-1">
+                            <a class="next" href="#mySlides" role="button" data-slide="next">&#10095;</a>
+                        </div>
+                   </div>
+                    <div class="customer-details col-xs-12 col-sm-12 col-md-3">
                          <form action="payment.html" method="GET" class="form-class">
                             <div>
                                 <label for="adults">Adults:</label>
@@ -56,11 +114,17 @@
                             </div>
                         </form>
                      </div>
-                </div>
-                <div class="hotel-details">
+            
+                <div class="hotel-details col-sm-12">
                     <h2>Radisson Blu Hotel</h2>
                     <p style="font-family: cursive; font-weight: bold;">RATING</p>
-                    <p>5 Star</p>
+                    <div>
+                        <i class="fa fa-star" style="color: orange;"></i>
+                        <i class="fa fa-star" style="color: orange;"></i>
+                        <i class="fa fa-star" style="color: orange;"></i>
+                        <i class="fa fa-star" style="color: orange;"></i>
+                        <i class="fa fa-star" style="color: orange;"></i>
+                      </div>
 
                     <p style="font-family: cursive; font-weight: bold;">AMENITIES</p>
 
@@ -82,7 +146,7 @@
             </div>
 
             <!--Footer Div-->
-            <footer class="flex-box">
+            <footer class="flex-box col-xs-12 col-sm-12">
                 <div class="btn">
                     <button type="button" class="btn btn-info btn-sm" data-toggle="modal" data-target="#contactUsModal">
                         Contact Us
@@ -116,13 +180,13 @@
                     <div class="modal-body">
                       <form action="" mathod="">
                          <div class="form-group row justify-content-around">
-                             <label class="col-sm-2 col-form-label" for="username">Username</label>
-                             <input required class="form-control col-sm-6" id="username" type="text" placeholder="Enter username">
+                             <label class="col-sm-2 col-form-label" for="loginUsername">Username</label>
+                             <input required class="form-control col-sm-6" id="loginUsername" type="text" placeholder="Enter username">
                           </div>
 
                           <div class="form-group row text-center justify-content-around">
-                            <label class="col-sm-2 col-form-label" for="password">Password</label>
-                            <input required class="form-control col-sm-6" id="password" type="password" placeholder="Enter password">
+                            <label class="col-sm-2 col-form-label" for="loginPassword">Password</label>
+                            <input required class="form-control col-sm-6" id="loginPassword" type="password" placeholder="Enter password">
                           </div>
                       </form>
                     </div>
@@ -150,8 +214,8 @@
                          </div>
                       <form action="" method="">
                          <div class="form-group row">
-                             <label class="col-sm-2 col-form-label" for="username">Email:</label>
-                             <input required class="form-control col-sm-6" id="username" type="email" placeholder="Enter your email id">
+                             <label class="col-sm-2 col-form-label" for="contactEmail">Email:</label>
+                             <input required class="form-control col-sm-6" id="contactEmail" type="email" placeholder="Enter your email id">
                           </div>
                       </form>
                     </div>
