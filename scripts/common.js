@@ -140,6 +140,7 @@ function logout(){
 
 //Make logo image as link to index.html
 if(window.location.href.split("?")[0] !== "http://127.0.0.1:5502/index.html"){
+    document.getElementById("logo-image").style.cursor = "pointer";
     document.getElementById("logo-image").addEventListener('click', function(){
         window.location.href = "http://127.0.0.1:5502/index.html";
     })
