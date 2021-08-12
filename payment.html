@@ -19,26 +19,38 @@
             <div class="content">
                 <div id="hotel-container">
                   
-                      <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" id="hotel-image"> 
+                      <img src="" id="hotel-image"> 
                   
                   <div id="hotel-details">
-                    <h2><b>Radisson Blu Hotel</b></h2>
-                    <p>#38 of 1,289 hotels in New Delhi</p>
-                    <p>National Highway 8, New Delhi 110017 india</p>
+                    <h2><b id="hotelName"><!--Hotel Name--></b></h2>
+                    <p id="rank"><!--Eg; #38 of 1,289 hotels in New Delhi--></p>
+                    <p id="address"><!--Hotel Address--></p>
                   </div>
                 </div>
 
                 <div id="payment-box">
                     <div id="customer-details">
-                        <p><b>Name: </b>John Doe</p>
-                        <p> <b>Number of Adults: </b> 2</p>      
-                        <p><b>Check-in Date: </b>06/06/2020</p>   
-                        <p><b>Check-out Date: </b>08/06/2020</p>
+                        <p><b>Name: </b><!--Customer name-->
+                          <span id="customerName"></span>
+                        </p>
+                        <p><b>Number of Adults: </b><!--Adults-->
+                            <span id="adults"></span>
+                        </p>      
+                        <p><b>Check-in Date: </b><!--check in date-->
+                            <span id="checkInDate"></span>
+                        </p>   
+                        <p><b>Check-out Date: </b><!--check out date-->
+                            <span id="checkOutDate"></span>
+                        </p>
                     </div>
     
                     <div id="payment-details">
-                        <p><b>Tariff Breakdown: </b>Rs 1000 x 2 Adults x 5 Nights</p>
-                        <p><b>Total Amount: </b>Rs 10000</p>
+                        <p><b>Tariff Breakdown: </b><!-- Eg: 2 days x 2 persons x 2 Nights-->
+                            <span id="priceBreakdown"></span>
+                        </p>
+                        <p><b>Total Amount: </b><!--Price in Rs-->
+                            <span id="price"></span>
+                        </p>
                     </div>                      
                     <div id="payNowButton">
                         <button class="btn btn-success disabled" data-target="#" id="pay">Pay Now</button>
@@ -54,7 +66,7 @@
             <!--Creating Contact Us Modal-->
             <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog"></div>
 
-            <script src="scripts/config.js"></script>
+             <script src="scripts/config.js"></script>
             <script src="scripts/common.js"></script>
             <script src="scripts/payment.js"></script>
         </div>

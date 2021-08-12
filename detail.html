@@ -12,95 +12,63 @@
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
     </head>
     <body>
-        <div class="Box">
+        <div id="Box">
             <!--Header-->
             <header class="flex-box col-xs-12 col-sm-12" id="header"></header>
 
             <!--Content-->
             <div class="content">
-                <div class="container-fluid flexbox">
-                    <div class="slider-container col-xs-12 col-sm-12 col-md-8 col-lg-8">
-                        <div class="slider-control col-sm-1">
-                           <a class="prev" href="#mySlides" role="button" data-slide="prev">&#10094;</a>
-                       </div>
-                       <div id="mySlides" class="carousel slide col-xs-12 col-sm-12 col-md-6 col-lg-7" data-ride="carousel">
-                            <div class="carousel-inner">
-                                <div class="carousel-item  active" style="text-align: center;">
-                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/17/b3/09/b4/by-the-poolside.jpg" 
-                                    class="hotel-image col-xs-12 col-sm-12 col-md-6 col-lg-7" alt="First-slide">
-                                </div>
-                                <div class="carousel-item" style="text-align: center;">
-                                    <img src="https://media-cdn.tripadvisor.com/media/photo-o/01/fa/51/70/r-the-spa.jpg"
-                                     class="hotel-image col-xs-12 col-sm-12 col-md-6 col-lg-7" alt="Second-slide"> 
-                                </div>
-                                <div class="carousel-item" style="text-align: center;">
-                                    <img src="https://media-cdn.tripadvisor.com/media/photo-w/0e/b2/64/3f/radisson-blu-plaza-delhi.jpg"
-                                    class="hotel-image col-xs-12 col-sm-12 col-md-6 col-lg-7" alt="Third-slide"> 
-                                </div>
-                            </div>
+                <div class="box">
+                    <div id="slider-container">
+                        <div id="mySlides" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner" id="carouselInner"></div>
                         </div>
-                        <div class="slider-control col-sm-1">
-                            <a class="next" href="#mySlides" role="button" data-slide="next">&#10095;</a>
-                        </div>
-                   </div>
-                    <div class="customer-details col-xs-12 col-sm-12 col-md-3">
-                         <form action="payment.html" method="GET" class="form-class">
+                    </div>
+                    <div class="customer-details">
+                        <div id="form" class="form-class">
                             <div>
                                 <label for="adults">Adults:</label>
                                 <input type="number" name="adults" min="1" id="adults" value="1">
                             </div>
                             <div>
                                 <label for="name">Name:</label>
-                                <input required type="text" name="Name" id="name">
+                                <input required type="text" name="Name" id="name" value="">
                             </div>
                             <div>
                                 <label for="startDate">From Date:</label>
-                                <input required type="date" name="startDate" id="startDate" min="">
+                                <input required type="date" name="Check In Date" id="startDate" min="" value="">
                             </div>
                             <div>
                                 <label for="endDate">To Date:</label>
-                                <input required type="date" name="endDate" id="endDate" min="">
+                                <input required type="date" name="Check Out Date" id="endDate" min="" value="">
                             </div>
                             <div>
                                 <label for="totalPrice">Total:</label>
-                                <input required disabled type="text" name="total" id="totalPrice">
+                                <input required readonly type="text" name="total" id="totalPrice">
                             </div>
                             <div class="btn">
-                                <button class="btn btn-outline-success">
+                                <button type="button" id="book" class="btn btn-outline-success btn-sm">
                                     Book Now
-                                 </button>
+                                </button>  
                             </div>
-                        </form>
+                        </div>
                      </div>
                 </div>
+                
             
-                <div class="hotel-details col-sm-12">
-                    <h2>Radisson Blu Hotel</h2>
-                    <p style="font-family: cursive; font-weight: bold;">RATING</p>
-                    <div>
-                        <i class="fa fa-star" style="color: orange;"></i>
-                        <i class="fa fa-star" style="color: orange;"></i>
-                        <i class="fa fa-star" style="color: orange;"></i>
-                        <i class="fa fa-star" style="color: orange;"></i>
-                        <i class="fa fa-star" style="color: orange;"></i>
-                      </div>
+                <div id="hotel-details">
+                    <h2 id="hotelName"><!--HOTEL NAME--></h2>
+            
+                    <div id="rating">
+                        <p style="font-family: cursive; font-weight: bold;">RATING</p>
+                    </div>
 
-                    <p style="font-family: cursive; font-weight: bold;">AMENITIES</p>
+                    <p id="amenitiesHead" style="font-family: cursive; font-weight: bold;">AMENITIES</p>
 
-                    <ul>
-                        <li>Room Service</li>
-                        <li>Restuarant</li>
-                        <li>Business center</li>
-                        <li>Fitness center</li>
-                        <li>Pool</li>
-                    </ul>
+                    <ul id="amenities"><!--AMENITIES--></ul>
 
                     <h4 style="font-family: cursive; font-weight: bold;">DESCRIPTION</h4>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Expedita dolorum mollitia voluptates. 
-                       Aspernatur nihil tenetur ipsam sit quos deleniti? Consequatur possimus asperiores saepe tempore 
-                       dolores aliquid, quas labore laudantium ab.
-                    </p>
+                    <p id="description"><!--DESCRIPTION--></p>
                 </div>
             </div>
 
@@ -112,7 +80,7 @@
             <!--Creating Contact Us Modal-->
             <div class="modal fade" id="contactUsModal" tabindex="-1" role="dialog"></div>
 
-            <script src="scripts/config.js"></script>
+             <script src="scripts/config.js"></script>
             <script src="scripts/common.js"></script>
             <script src="scripts/detail.js"></script>
         </div>

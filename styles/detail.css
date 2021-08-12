@@ -1,52 +1,19 @@
-@media only screen and (max-width: 710px){
-    .prev{
-        left: 80px;
-        z-index:1;
-        margin: auto;
-        position: absolute;
-    }
-
-    .next{
-        right: 80px;
-        z-index:1;
-        margin: auto;
-        position: absolute; 
-    }
-    
-    .slider-container{
-        margin: 2%;
-        margin-bottom: 0;
-    }
-    
-   .carousel{
-       width: 100%;
-   }
-
-    .customer-details{
-        height:auto;
-        margin: 2%;
-        margin-top: 0;
-    }
-
-    .hotel-image{
-        width: auto;
-    }
-}
-.container-fluid{
-    display: flex;
-    flex-wrap: wrap;
-}
 .box{
     width: 100%;
     height: 400px;
     margin-top: 70px;
+    margin-bottom: 5%;
+    padding: 0;
     display: flex;
+    flex-direction: row;
     flex-wrap: wrap;
+    justify-content: center;
 }
-.slider-container{
+#slider-container{
     height: 400px;
+    width: 60%;
     border: 1px solid black;
-    margin: 2% 0% 2% 2%;
+    margin: 1% 0% 5% 2%;
     margin-top: 70px;
     padding: 0;
     display: flex;
@@ -54,29 +21,45 @@
     justify-content: space-evenly;
     align-items:center;
 }
+.carousel{
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
 .slider-control{
-    margin: auto;
+    z-index: 1;
+    margin: 10px;
     padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
 }
 
 .next{
-   font-size: 55px;
-   color: rosybrown;
+    right: 0%;
+    z-index: 1;
+    font-size: 55px;
+    color: black;
     opacity: 0.5;
+    position: absolute;
 }
 .prev{
+    left: 1%;
+    z-index: 1;
     font-size: 55px;
-    color: rosybrown;
+    color: black;
     opacity: 0.5;
+    position: absolute;
 }
 .next:hover{
     text-decoration: none;
-    color: rosybrown;
+    color: black;
     opacity: 1;
 }
 .prev:hover{
     text-decoration: none;
-    color: rosybrown;
+    color: black;
     opacity: 1;
 }
 .hotel-image{
@@ -87,6 +70,8 @@
 }
 .customer-details{
     border: 1px solid black;
+    height: 400px;
+    width: 36%;
     margin: 2% 2% 2% 0%;
     margin-top: 70px;
     display: flex;
@@ -94,13 +79,15 @@
     align-items: center;
 }
 .form-class{
+    height: 400px;
     width: 100%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 .form-class div{
-    margin: 4% 6% 2%;
+    height: 66px;
+    padding: 21px;
     display: flex;
     flex-direction: row;
     justify-content: center;;
@@ -114,16 +101,133 @@ input{
     width: 60%;
     display: flex;
 }
-.hotel-details{
-    margin: 2% 2% 7%;
+#hotel-details{
+    margin: 1% 2% 10%;
 }
-.hotel-details *{
-    padding: 1% 0% 0% 0%;
+#hotel-details #hotelName, #rating, #amenitiesHead, #amenities, #description{
+    margin: 1% 2%;
+}
+i{
+    margin: 1% 0% 0%;
 }
 .btn{
     display: flex;
     align-items: end;
 }
-button{
-    padding: 2% 1%;
+.hotel-image{
+    width: 100%;
+}
+img{
+    height:400px;
+}
+
+/*for mobile screens*/
+@media only screen and (min-width: 320px) and (max-width: 575px){
+    .box{
+        height: auto;
+    }
+    #slider-container{
+        width: 96%;
+        height: 100%;
+        border: 1px solid black;
+        margin: 0% 2%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items:center;
+    }
+    .slider-control{
+        z-index: 1;
+        margin: 1px;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        position: absolute;
+    }
+
+    .prev{
+        left: -45%;
+        z-index:1;
+        margin-left: 10px;
+        position: absolute;
+    }
+
+    .next{
+        right: -44%;
+        z-index:1;
+        margin-right: 10px;
+        position: absolute; 
+    }
+    
+   .carousel{
+       width: 100%;
+   }
+
+    .customer-details{
+        height: auto;
+        width: 96%;
+        margin: 0% 2% 2%;
+        margin-top: 0;
+    }
+
+    .hotel-image{
+        width: 100%;
+    }
+}
+/*for ipad screens*/
+@media only screen and (min-width: 576px) and (max-width: 767px){
+    #slider-container{
+        height: 100%;
+        width: 60%;
+        border: 1px solid black;
+        margin: 70px 0% 2% 2%;
+        padding: 0;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items:center;
+    }
+
+    .slider-control{
+        z-index: 1;
+        margin: 1px;
+        padding: 0;
+        position: absolute;
+    }
+
+    .prev{
+        left: 4%;
+        z-index: 1;
+        opacity: 0.5;
+        position: absolute;
+    }
+
+    .next{
+        right: 0%;
+        z-index:1;
+        margin-right: 10px;
+        position: absolute; 
+    }
+    
+   .carousel{
+       width: 100%;
+   }
+
+    .customer-details{
+        height: 400px;
+        width: 30%;
+        margin: 0% 2% 2% 0%;
+        margin-top: 70px;
+        padding: 0%;
+    }
+
+    .form-class{
+        height: 400px;
+    }
+
+    .hotel-image{
+        width: 100%;
+    }
 }

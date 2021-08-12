@@ -23,13 +23,15 @@ document.getElementById("pay").addEventListener('click', function() {
           xhr.withCredentials = false;
 
           xhr.addEventListener("readystatechange", function () {
+               // if(this.readyState == this.LOADING){
+
+               // }
                if (this.readyState === this.DONE) {
                     let hotelDetail = JSON.parse(this.responseText)
                     console.log(hotelDetail);
 
                     //populate the UI
                     //get image src add to UI
-                    debugger;
                     let imageUrl = hotelDetail.data[0].photo.images.original.url;
                     document.getElementById("hotel-image").src= imageUrl;
 

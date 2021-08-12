@@ -77,12 +77,6 @@ document.getElementById("endDate").addEventListener('change',function (){
         document.getElementById("startDate").value = document.getElementById("endDate").value = "";
         document.getElementById("totalPrice").value = "0";
 
-    
-
-    //GEnerating UI;
-    generateUI();
-    //setting min="today's date"
-    setCheckInDateFormMinValue();
 
     function setCheckInDateFormMinValue(){
         let today = new Date();
@@ -111,6 +105,9 @@ document.getElementById("endDate").addEventListener('change',function (){
                     startDateMin.min = `${currentDate.year}-${currentDate.month}-${currentDate.date}`;   
             }
     }
+
+    //setting min="today's date"
+    setCheckInDateFormMinValue();
     
     function generateUI(){
          //http request to server for data
@@ -156,7 +153,7 @@ document.getElementById("endDate").addEventListener('change',function (){
              for(let index = 0; index < 11; index++){
                  let amenity = document.createElement("li");
                  amenity.id = `amenity-${index}`;
-                 amenity.innerHTML = `<span>${detailJSONData.data[0].amenities[index].key}</span`;
+                 amenity.innerHTML = `<span>${detailJSONData.data[0].amenities[index].name}</span`;
                  document.getElementById("amenities").appendChild(amenity);
              }     
              
@@ -249,6 +246,9 @@ document.getElementById("endDate").addEventListener('change',function (){
 
     }
 
+    //GEnerating UI;
+    generateUI();
+
     document.getElementById("startDate").addEventListener('change', function(){
         let tomorrow = new Date(document.getElementById("startDate").valueAsDate.getTime()+ 1000*3600*24);
 
@@ -311,7 +311,7 @@ document.getElementById("endDate").addEventListener('change',function (){
 
         document.getElementById("book").addEventListener('click', ()=>{
 
-                                                let inputForms = document.getElementsByTagName("input.");
+                                                let inputForms = document.getElementsByTagName("input");
                                                 //Make sure the dates are set to get total Amount
                                                 if(inputForms[4].value == "0"){
                                                 alert("!!Please select Dates");

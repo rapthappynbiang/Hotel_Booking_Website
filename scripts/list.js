@@ -12,9 +12,6 @@ function showList(){
         window.location.href = `http://127.0.0.1:5502/index.html`;
     }
 
-    //Function to generate UI
-    generateUI();
-
     function showMap(){
         document.getElementById("list").style.display = "none";
         document.getElementById("map").style.display = "flex";
@@ -85,3 +82,6 @@ function showList(){
 
     xhr.send(data);
     }
+
+    //Function to generate UI
+    generateUI();
