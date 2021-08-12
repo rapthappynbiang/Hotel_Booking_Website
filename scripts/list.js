@@ -79,7 +79,6 @@ function showList(){
 
     let cityURL = "https://travel-advisor.p.rapidapi.com/locations/search?query=" + currentCity + "&limit=30&offset=0&units=km&location_id=1&currency=USD&sort=relevance&lang=en_US";
 
-    var 
     xhr.open("GET", cityURL);
     xhr.setRequestHeader("x-rapidapi-key", config.x_rapidapi_key);
     xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
