@@ -1,3 +1,4 @@
+
 generateHeaderUI();
 generateFooterUI();
 loginModal();

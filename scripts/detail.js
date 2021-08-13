@@ -1,4 +1,13 @@
-
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.getElementsByTagName("body").style.visibility = "hidden";
+        document.getElementById("loader").style.src = "http://127.0.0.1:5502/scripts/loader.css";
+        document.getElementById("loader").style.visibility = "visible";
+    } else {
+        document.getElementById("loader").style.display = "none";
+        document.getElementsByTagName("body").style.visibility = "visible";
+    }
+};
     let today = new Date();
     var currentDate = {
         "date" : today.getDate(), 

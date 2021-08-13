@@ -10,8 +10,10 @@
         <link rel="stylesheet" href="styles/common.css">
         <link rel="stylesheet" href="styles/list.css">
         <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+        <script src="https://unpkg.com/@googlemaps/markerclustererplus/dist/index.min.js"></script>
     </head>
     <body>
+      <div id="loader"></div>
          <div class="Box">
              <!--Header-->
              <header class="flex-box col-md-12" id="header"></header>
@@ -28,10 +30,7 @@
                </div>
   
                <div class="hotel-container" id="list"></div>
-              <div id="map" class="">
-                <img class="mapImage image-responsive" src="https://cdn.pixabay.com/photo/2018/01/31/05/43/web-3120321_960_720.png">
-                <p>MAP VIEW</p>
-              </div>
+              <div id="map"></div>
             </div>    
 
               <!--Footer-->
@@ -45,6 +44,6 @@
          </div>
          <script src="scripts/config.js"></script>
          <script src="scripts/common.js"></script>
-         <script src="scripts/list.js"></script>
+         <script src="scripts/list.js"></script> 
     </body>
 </html>

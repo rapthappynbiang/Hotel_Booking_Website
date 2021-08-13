@@ -1,15 +1,13 @@
-
-function showMore(){
-     document.getElementById("secondCityContainer").style.display="flex";
-     document.getElementById("viewLess").style.display = "block";
-     document.getElementById("viewMore").style.display = "none";
-}
-
-function showLess(){
-    document.getElementById("secondCityContainer").style.display="none";
-    document.getElementById("viewLess").style.display = "none";
-    document.getElementById("viewMore").style.display = "block";
-}
+document.onreadystatechange = function() {
+    if (document.readyState !== "complete") {
+        document.getElementsByTagName("body").style.visibility = "hidden";
+        document.getElementById("loader").style.src = "http://127.0.0.1:5502/scripts/loader.css";
+        document.getElementById("loader").style.visibility = "visible";
+    } else {
+        document.getElementById("loader").style.display = "none";
+        document.getElementsByTagName("body").style.visibility = "visible";
+    }
+};
 function showMore(){
     document.getElementById("secondCityContainer").style.display="flex";
     document.getElementById("viewLess").style.display = "block";
@@ -105,7 +103,7 @@ for(let index = 0; index<city.length;index++){
                });
 
                 xhr.open("GET", `https://travel-advisor.p.rapidapi.com/locations/auto-complete?query=${val}&lang=en_US&units=km`);
-                xhr.setRequestHeader("x-rapidapi-key", config.x_rapidapi_key);
+                xhr.setRequestHeader("x-rapidapi-key", config.x_rapidapi_key);//add your api key store in config.js.
                 xhr.setRequestHeader("x-rapidapi-host", "travel-advisor.p.rapidapi.com");
 
                 xhr.send(data);
